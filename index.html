@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mon Dashboard</h1>
+    <div class="video-container">
+        <div class="container">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <img id="camera-stream" src="http://192.168.4.1:81/stream" alt="Flux vidéo de la caméra" style="display: none;">
+    </div>
+
+    <div class="data-container">
+        <div class="data-box temp">
+            <p>Température</p>
+            <p><span id="temperature-value">--</span> °C</p>
+        </div>
+        <div class="data-box humidity">
+            <p>Humidité</p>
+            <p><span id="humidity-value">--</span> %</p>
+        </div>
+    </div>
+
+    <div class="rgb-buttons">
+        <button id="btn-red">R</button>
+        <button id="btn-green">G</button>
+        <button id="btn-blue">B</button>
+        <button id="btn-off"><span class="power-symbol"></span></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
